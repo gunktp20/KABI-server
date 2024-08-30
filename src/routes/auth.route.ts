@@ -11,7 +11,7 @@ const registerLimiter = rateLimit({
   windowMs: 1 * 60 * 1000,
   max: 5,
   message:
-    "Too many accounts created from, please try again after 1 minutes",
+    "Too many accounts created request, please try again after 1 minutes",
 });
 
 router.route("/register").post(registerLimiter,register);
